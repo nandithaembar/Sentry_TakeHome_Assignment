@@ -4,21 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#000000">
-  <!--
-      manifest.json provides metadata used when your web app is added to the
-      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
-    -->
+ 
   <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
   <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
 
-  <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+  
   <title>Sentry Demo</title>
 
   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -26,9 +16,7 @@
   <script type="text/javascript">
 
   var app = angular.module('ngclickApp', []);
-
   app.controller('ngclickCtrl', function ($scope) {
-
   $scope.clkcount = 0;
 
   });
@@ -45,7 +33,6 @@
     Sentry.init({
       dsn: 'https://101b624b9a3344918485e095870cdaef@o543942.ingest.sentry.io/5665058',
       ignoreErrors:['this.myCodeIsPerfect is not a function', 'person.fullName12 is not a function'],
-
       // Whether SDK should be enabled or not.
       enabled: true,
     });
@@ -62,11 +49,8 @@
 <body>
 
   <div ng-app="ngclickApp" ng-controller="ngclickCtrl">
-
   <h2>AngularJs ng-click Events Example</h2>
-
   <input type="button" style="cursor:pointer" value="Click Here" ng-click ="clkcount=clkcount+1" /><br /><br />
-
   <span style="color:Red">Number of Times you Clicked: {{clkcount}}</span>
 
   </div>
@@ -74,14 +58,6 @@
     You need to enable JavaScript to run this app.
   </noscript>
   <div id="root" class="root"></div>
-  <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
 </body>
 
 </html>
